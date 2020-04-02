@@ -1,0 +1,121 @@
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    box-sizing: border-box;
+    flex: 0 0 20%;
+    background-color: inherit;
+    position: relative;
+}
+
+.reverse-spinner {
+    background: transparent;
+    border-top: 4px solid #1976d2;
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+    top: -7.5rem;
+  }
+  
+  .reverse-spinner:before {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    content: "";
+    border-top: 4px solid #03a9f4;
+    border-left: 4px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: spinBack 1s linear infinite;
+    animation: spinBack 1s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes spinBack {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-720deg);
+      transform: rotate(-720deg);
+    }
+  }
+  
+  @keyframes spinBack {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-720deg);
+      transform: rotate(-720deg);
+    }
+  }
+
+.dot-loader{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #03A9F4;
+    position: relative;
+    -webkit-animation: 1.2s scaleDown ease-in-out infinite ;
+    animation: 1.2s scaleDown ease-in-out infinite ;
+}
+
+.dot-loader:nth-child(2){
+    margin: 0 15px;
+    -webkit-animation: 1.2s scaleDown ease-in-out infinite .15555s;
+    animation: 1.2s scaleDown ease-in-out infinite .15555s;
+}
+
+.dot-loader:nth-child(3){
+    -webkit-animation: 1.2s scaleDown ease-in-out infinite .300000s;
+    animation: 1.2s scaleDown ease-in-out infinite .300000s;
+}
+
+@-webkit-keyframes scaleDown{
+    0%, 80%, 100%{
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    40%{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+@keyframes scaleDown{
+    0%, 80%, 100%{
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    40%{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
