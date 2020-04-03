@@ -40,7 +40,7 @@ const analyzeMachine = createMachine({
                 ANALYZE_FINISHED: 'results'
             },
             invoke: {
-                src: sendEventAfter(3000, 'ANALYZE_FINISHED')
+                src: sendEventAfter(5000, 'ANALYZE_FINISHED')
             }
         },
         results: {
