@@ -15,7 +15,7 @@ const show = (element) => {
 }
 
 const hide = (element) => {
-  element.classList.add('hidden')
+    element.classList.add('hidden')
 }
 
 const afterPageLoad = () => {
@@ -38,10 +38,12 @@ const afterPageLoad = () => {
             showAnalyzingIndicator(false)
             show(fingerprintReader)
             backgroundImage.classList.remove('deblur')
+            fingerprintReader.classList.add('pulse')
 
         } else if (state === 'measuring') {
             textLabel.innerText = 'Measuring...'
             show(scanningAnimation)
+            fingerprintReader.classList.remove('pulse')
         } else if (state === 'analyzing') {
             textLabel.innerText = 'Analyzing the results...'
             hide(scanningAnimation)
@@ -63,23 +65,24 @@ const afterPageLoad = () => {
         }
     })
 
-    fingerprintReader.ontouchstart = (event) => {
+    fingerprintReader.addEventListener('touchstart', () => {
         machine.send('ON_FINGER_DOWN')
-        event.preventDefault()
-    }
+    }, { passive: true })
 
-    fingerprintReader.ontouchend = () => {
+    fingerprintReader.addEventListener('touchend', () => {
         machine.send('ON_FINGER_UP')
-    }
 
-    resetButton.onclick = () => {
+    }, { passive: true })
+
+    resetButton.addEventListener('click', () => {
         machine.send('RESET')
-    }
-
+    }, { passive: true })
 }
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
     afterPageLoad()
 })
 
-window.addEventListener("contextmenu", function (e) { e.preventDefault(); })
+window.addEventListener('contextmenu', (event) => {
+    event.preventDefault()
+})

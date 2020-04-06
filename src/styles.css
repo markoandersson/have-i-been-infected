@@ -20,6 +20,9 @@ body {
 
 #fingerprint-scanner {
     filter: invert(36%) sepia(28%) saturate(4797%) hue-rotate(190deg) brightness(107%) contrast(98%);
+}
+
+#fingerprint-scanner.pulse {
     animation: pulse 0.5s 2s 2 ease-in-out;
 }
 
