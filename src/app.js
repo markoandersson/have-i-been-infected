@@ -62,6 +62,9 @@ const afterPageLoad = () => {
             textLabel.classList.add('text-red-600', 'text-3xl')
             show(resetButton)
             showAnalyzingIndicator(false)
+        } else if (state === 'not_mobile') {
+            hide(fingerprintReader)
+            textLabel.innerText = 'Unfortunatelly this application works only with mobile devices.'
         }
     })
 
