@@ -1,6 +1,9 @@
 # Have I been infected?
 
-This is a small hobby project for me to try out XState and Tailwind CSS.
+Try it out: [https://haveibeeninfected.markoandersson.info/](https://haveibeeninfected.markoandersson.info/)
+
+
+This is a small hobby project for me to try out XState, Tailwind CSS and CSS animations.
 
 It models the measurement process as a state machine allowing for example timed state transfers easily from measurement to analyze states.
 
