@@ -1,7 +1,10 @@
 @tailwind base;
 
+a { -webkit-user-select: none !important; }
+
 body {
     font-family: 'Raleway', sans-serif;
+    -webkit-touch-callout: none !important; 
 }
 
 #background-image {

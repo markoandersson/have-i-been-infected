@@ -7,13 +7,14 @@ This is a small hobby project for me to try out XState, Tailwind CSS and CSS ani
 
 It models the measurement process as a state machine allowing for example timed state transfers easily from measurement to analyze states.
 
-UI uses just HTML + custom Javascript as it's so simple that there is no point of having any UI frameworks such as React or Vue.
+UI uses just HTML + ~~custom Javascript as it's so simple that there is no point of having any UI frameworks such as React or Vue.~~ AlpineJS to manage visibility of the HTML elements. The implementation is much clearer and more maintainable.
 
 ## Stack
 
 - [XState](https://xstate.js.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Parcel](https://parceljs.org/)
+- [Alpine JS](https://github.com/alpinejs/alpine)
 
 ## Running
 
